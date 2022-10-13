@@ -31,6 +31,11 @@ dependencies:
   flutter_hooks: 0.18.5+1
   cached_network_image: 3.2.2
   theme_tailor_annotation: 1.0.3
+  firebase_core: 2.1.1
+  firebase_auth: 4.1.1
+  cloud_firestore: 4.0.4
+  go_router: 5.1.5
+  logger: 1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -52,3 +57,23 @@ flutter:
     - assets/translations/
     - assets/icons/
     - assets/fonts/
+
+  fonts:
+    - family: Mulish
+      fonts:
+        - asset: assets/fonts/Mulish/Mulish-ExtraLight.ttf
+        - asset: assets/fonts/Mulish/Mulish-Light.ttf
+        - asset: assets/fonts/Mulish/Mulish-Regular.ttf
+        - asset: assets/fonts/Mulish/Mulish-Medium.ttf
+        - asset: assets/fonts/Mulish/Mulish-SemiBold.ttf
+        - asset: assets/fonts/Mulish/Mulish-Bold.ttf
+        - asset: assets/fonts/Mulish/Mulish-ExtraBold.ttf
+        - asset: assets/fonts/Mulish/Mulish-Black.ttf
+        - asset: assets/fonts/Mulish/Mulish-ExtraLightItalic.ttf
+        - asset: assets/fonts/Mulish/Mulish-LightItalic.ttf
+        - asset: assets/fonts/Mulish/Mulish-Italic.ttf
+        - asset: assets/fonts/Mulish/Mulish-MediumItalic.ttf
+        - asset: assets/fonts/Mulish/Mulish-SemiBoldItalic.ttf
+        - asset: assets/fonts/Mulish/Mulish-BoldItalic.ttf
+        - asset: assets/fonts/Mulish/Mulish-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Mulish/Mulish-BlackItalic.ttf
