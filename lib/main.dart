@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:french_conjugation_learn/presentation/style/app_theme.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
 
 import 'data/DI/configure_dependencies.dart';
@@ -8,6 +10,7 @@ import 'presentation/routing/main_router.gr.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   await EasyLocalization.ensureInitialized();
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
@@ -31,6 +34,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
   final _mainRouter = MainRouter();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -42,12 +46,7 @@ class MyApp extends StatelessWidget {
       title: 'French Verb Learn',
       theme: ThemeData.light().copyWith(
         extensions: <ThemeExtension<dynamic>>[
-          //CustomAppTheme.lightTheme,
-        ],
-      ),
-      darkTheme: ThemeData.dark().copyWith(
-        extensions: <ThemeExtension<dynamic>>[
-          //CustomAppTheme.darkTheme,
+          CustomAppTheme.lightTheme,
         ],
       ),
     );

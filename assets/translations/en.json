@@ -1,1 +1,15 @@
-{}
+{
+    "appTitle": "French Verb Conjugation",
+    "mainPage": {
+        "checkConjguation": "Check Verb Conjugation",
+        "dailyTask": "Daily Task",
+        "learnConjugation": "Learn Verb Conjugation"
+    },
+    "searchPage": {
+        "searchVerb": "Search Verb",
+        "writeVerb": "Write your verb here"
+    },
+    "conjugationPage":{
+        "conjugationOf":"Conjugation of "
+    }
+}
