@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "463672341220",
+    "firebase_url": "https://french-conjugation-a5ad5-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "french-conjugation-a5ad5",
+    "storage_bucket": "french-conjugation-a5ad5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463672341220:android:48e3160aed715abc3432f1",
+        "android_client_info": {
+          "package_name": "com.example.french_conjugation_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463672341220-vobvum2mfckmrqurhu6s8f5ssuii8mvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAel3QUFj6jSBPXYlQnyiqK4IeciitY5cI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463672341220-vobvum2mfckmrqurhu6s8f5ssuii8mvq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "463672341220-5mgvdienrfg3pbpcgtugsn2sf6tq7a20.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "frenchVerbConjugation"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
