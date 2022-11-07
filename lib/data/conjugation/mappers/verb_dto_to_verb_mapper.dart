@@ -9,16 +9,38 @@ class VerbDtoToVerbMapper extends DataMapper<VerbDto, Verb> {
   Verb map(VerbDto data) {
     return Verb(
       infinitif: data.infinitif,
-      participePresent: data.participePresent,
-      participePasse: data.participePasse,
-      auxiliaire: data.auxiliaire,
-      formePronominale: data.formePronominale,
-      formeNonPronominale: data.formeNonPronominale,
-      indicatifConj: mapIndicatif(data),
-      conditionnelConj: mapConditionnel(data),
-      subjonctifConj: mapSubjonctif(data),
-      imperatifConj: mapImperatif(data),
+      mappedConjugations: mapConjugations(
+        indicatifConj: mapIndicatif(data),
+        subjonctifConj: mapSubjonctif(data),
+        conditionnelConj: mapConditionnel(data),
+        imperatifConj: mapImperatif(data),
+      ),
+      mappedSingularForms: mapSingularForms(data),
     );
+  }
+
+  Map<String, String> mapSingularForms(VerbDto data) {
+    return {
+      'Auxiliarie': data.auxiliaire,
+      'Participe Présent': data.participePresent,
+      'Participe Passé': data.participePasse,
+      'Forme Pronominale': data.formePronominale,
+      'Forme Non Pronominale': data.formeNonPronominale,
+    };
+  }
+
+  Map<String, Map<String, List<String>>> mapConjugations({
+    required Map<String, List<String>> indicatifConj,
+    required Map<String, List<String>> subjonctifConj,
+    required Map<String, List<String>> conditionnelConj,
+    required Map<String, List<String>> imperatifConj,
+  }) {
+    return {
+      'Indicatif': indicatifConj,
+      'Subjonctif': subjonctifConj,
+      'Conditionnel': conditionnelConj,
+      'Imperatif': imperatifConj,
+    };
   }
 
   Map<String, List<String>> mapIndicatif(VerbDto verb) {
