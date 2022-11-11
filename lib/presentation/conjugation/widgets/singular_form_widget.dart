@@ -3,8 +3,8 @@ import 'package:french_conjugation_learn/presentation/style/app_theme.dart';
 
 class SingularFormWidget extends StatelessWidget {
   const SingularFormWidget({
-    Key? key,
     required this.singularForm,
+    Key? key,
   }) : super(key: key);
 
   final MapEntry<String, String> singularForm;

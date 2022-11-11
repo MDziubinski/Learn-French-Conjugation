@@ -11,8 +11,8 @@ const _gridChildAspectRatio = 0.80;
 
 class ConjugationTile extends StatelessWidget {
   const ConjugationTile({
-    Key? key,
     required this.mappedConj,
+    Key? key,
   }) : super(key: key);
 
   final MapEntry<String, Map<String, List<String>>> mappedConj;

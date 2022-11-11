@@ -25,17 +25,4 @@ class AppColors {
   static const element = Color(0xFFE1E1E1);
   static const tabBar = Color(0xFFD1D1D6);
   static const grey30 = Color(0xFFBABAC2);
-  static const superChance = Color(0xFF3078BE);
-
-  /// Error
-  static const error100 = Color(0xFFFF5757);
-  static const error90 = Color(0xFFFF6868);
-  static const error80 = Color(0xFFFF7979);
-  static const error70 = Color(0xFFFF8989);
-  static const error60 = Color(0xFFFF9A9A);
-  static const error50 = Color(0xFFFFABAB);
-  static const error40 = Color(0xFFFFBCBC);
-  static const error30 = Color(0xFFFFCDCD);
-  static const error20 = Color(0xFFFFDDDD);
-  static const error10 = Color(0xFFFFEEEE);
 }

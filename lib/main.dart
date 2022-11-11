@@ -2,11 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:french_conjugation_learn/presentation/routing/main_go_router.dart';
 import 'package:french_conjugation_learn/presentation/style/app_theme.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
+import 'package:logger/logger.dart';
 
 import 'data/DI/configure_dependencies.dart';
-import 'presentation/routing/main_router.gr.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,15 +27,14 @@ Future<void> main() async {
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         startLocale: const Locale('en'),
-        child: MyApp(),
+        child: const MyApp(),
       ),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
-  final _mainRouter = MainRouter();
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +42,9 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      routeInformationParser: _mainRouter.defaultRouteParser(),
-      routerDelegate: _mainRouter.delegate(),
+      routeInformationProvider: router.routeInformationProvider,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
       title: 'French Verb Learn',
       theme: ThemeData.light().copyWith(
         extensions: <ThemeExtension<dynamic>>[
@@ -53,3 +54,11 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+var logger = Logger(
+  printer: PrettyPrinter(),
+);
+
+var loggerNoStack = Logger(
+  printer: PrettyPrinter(methodCount: 0),
+);

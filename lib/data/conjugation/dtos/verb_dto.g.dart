@@ -1,0 +1,91 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'verb_dto.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+VerbDto _$VerbDtoFromJson(Map<String, dynamic> json) => VerbDto(
+      infinitif: json['infinitif'] as String,
+      participePresent: json['participePresent'] as String,
+      participePasse: json['participePasse'] as String,
+      auxiliaire: json['auxiliaire'] as String,
+      formePronominale: json['formePronominale'] as String,
+      formeNonPronominale: json['formeNonPronominale'] as String,
+      present:
+          (json['present'] as List<dynamic>).map((e) => e as String).toList(),
+      imparfait:
+          (json['imparfait'] as List<dynamic>).map((e) => e as String).toList(),
+      passeSimple: (json['passeSimple'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      futurSimple: (json['futurSimple'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      passeCompose: (json['passeCompose'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      plusQueParfait: (json['plusQueParfait'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      passeAnterieur: (json['passeAnterieur'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      futurAnterieur: (json['futurAnterieur'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      subjonctifPresent: (json['subjonctifPresent'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      subjonctifImparfait: (json['subjonctifImparfait'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      subjonctifPasse: (json['subjonctifPasse'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      subjonctifPlusQueParfait:
+          (json['subjonctifPlusQueParfait'] as List<dynamic>)
+              .map((e) => e as String)
+              .toList(),
+      conditionnelPresent: (json['conditionnelPresent'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      conditionnelPasse: (json['conditionnelPasse'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      conditionnelPasseII: (json['conditionnelPasseII'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      imperatif:
+          (json['imperatif'] as List<dynamic>).map((e) => e as String).toList(),
+      imperatifPasse: (json['imperatifPasse'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$VerbDtoToJson(VerbDto instance) => <String, dynamic>{
+      'infinitif': instance.infinitif,
+      'participePresent': instance.participePresent,
+      'participePasse': instance.participePasse,
+      'auxiliaire': instance.auxiliaire,
+      'formePronominale': instance.formePronominale,
+      'formeNonPronominale': instance.formeNonPronominale,
+      'present': instance.present,
+      'imparfait': instance.imparfait,
+      'passeSimple': instance.passeSimple,
+      'futurSimple': instance.futurSimple,
+      'passeCompose': instance.passeCompose,
+      'plusQueParfait': instance.plusQueParfait,
+      'passeAnterieur': instance.passeAnterieur,
+      'futurAnterieur': instance.futurAnterieur,
+      'subjonctifPresent': instance.subjonctifPresent,
+      'subjonctifImparfait': instance.subjonctifImparfait,
+      'subjonctifPasse': instance.subjonctifPasse,
+      'subjonctifPlusQueParfait': instance.subjonctifPlusQueParfait,
+      'conditionnelPresent': instance.conditionnelPresent,
+      'conditionnelPasse': instance.conditionnelPasse,
+      'conditionnelPasseII': instance.conditionnelPasseII,
+      'imperatif': instance.imperatif,
+      'imperatifPasse': instance.imperatifPasse,
+    };

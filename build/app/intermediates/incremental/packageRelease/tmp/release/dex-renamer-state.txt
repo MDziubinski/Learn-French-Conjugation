@@ -1,0 +1,4 @@
+#Fri Nov 04 19:56:31 CET 2022
+base.0=C\:\\Users\\mikol\\Documents\\Projects\\flutter_conjugation_learn\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

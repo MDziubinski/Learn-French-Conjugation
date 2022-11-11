@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:french_conjugation_learn/domain/conjugation/model/verb.dart';
+import 'package:french_conjugation_learn/main.dart';
 import 'package:french_conjugation_learn/presentation/conjugation/cubit/conjugation_state.dart';
 import 'package:french_conjugation_learn/presentation/use_case/get_conjugation_use_case.dart';
 import 'package:injectable/injectable.dart';
@@ -19,7 +20,9 @@ class ConjugationCubit extends Cubit<ConjugationState> {
       conjugations = await _getConjugationUseCase.call(searchParam);
       if (conjugations.isEmpty) emit(const ConjugationState.idle());
       _emitLoaded();
-    } catch (e) {}
+    } catch (e, st) {
+      logger.e('Error! Failed to get verb conjugations', e, st);
+    }
   }
 
   void setIdle() {

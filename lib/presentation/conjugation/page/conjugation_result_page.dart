@@ -11,8 +11,8 @@ class ConjugationResultPage extends StatelessWidget {
   final Verb verb;
 
   const ConjugationResultPage({
-    Key? key,
     required this.verb,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -31,7 +31,7 @@ class ConjugationResultPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(AppDimens.m),
+          padding: const EdgeInsets.all(AppDimens.m),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -52,7 +52,7 @@ class ConjugationResultPage extends StatelessWidget {
                 ),
               ),
               ..._generateSingularFormWidgets(singularForms).toList(),
-              SizedBox(height: AppDimens.xl),
+              const SizedBox(height: AppDimens.xl),
               ..._generateConjugationTilesWidgets(mappedConj).toList(),
             ],
           ),

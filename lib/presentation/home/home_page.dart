@@ -1,10 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:french_conjugation_learn/generated/local_keys.g.dart';
-import 'package:french_conjugation_learn/presentation/routing/main_router.gr.dart';
 import 'package:french_conjugation_learn/presentation/style/app_dimens.dart';
 import 'package:french_conjugation_learn/presentation/style/app_theme.dart';
+import 'package:go_router/go_router.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -32,18 +31,14 @@ class MainPage extends StatelessWidget {
             child: Column(
               children: [
                 MainPageTile(
-                  theme: theme,
+                  content: LocaleKeys.mainPage_checkConjguation.tr(),
+                  onTapped: () => context.push('/conjSearchPage'),
+                ),
+                MainPageTile(
                   content: LocaleKeys.mainPage_dailyTask.tr(),
                   onTapped: () {},
                 ),
                 MainPageTile(
-                  theme: theme,
-                  content: LocaleKeys.mainPage_checkConjguation.tr(),
-                  onTapped: () =>
-                      context.router.push(const ConjugationSearchPageRoute()),
-                ),
-                MainPageTile(
-                  theme: theme,
                   content: LocaleKeys.mainPage_learnConjugation.tr(),
                   onTapped: () {},
                 ),
@@ -58,18 +53,18 @@ class MainPage extends StatelessWidget {
 
 class MainPageTile extends StatelessWidget {
   const MainPageTile({
-    Key? key,
-    required this.theme,
     required this.content,
     required this.onTapped,
+    Key? key,
   }) : super(key: key);
 
-  final CustomAppTheme? theme;
   final String content;
   final VoidCallback onTapped;
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).extension<CustomAppTheme>();
+
     return GestureDetector(
       onTap: onTapped,
       child: Padding(

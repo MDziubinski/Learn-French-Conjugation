@@ -30,18 +30,6 @@ class _$CustomAppTheme {
   static final element = [AppColors.element];
   static final tabBar = [AppColors.tabBar];
   static final grey30 = [AppColors.grey30];
-  static final superChance = [AppColors.superChance];
-
-  static final error100 = [AppColors.error100];
-  static final error90 = [AppColors.error90];
-  static final error80 = [AppColors.error80];
-  static final error70 = [AppColors.error70];
-  static final error60 = [AppColors.error60];
-  static final error50 = [AppColors.error50];
-  static final error40 = [AppColors.error40];
-  static final error30 = [AppColors.error30];
-  static final error20 = [AppColors.error20];
-  static final error10 = [AppColors.error10];
 
   /// Fonts
   static final style0 = [setMainTextColorLight(AppTypography.style0)];
