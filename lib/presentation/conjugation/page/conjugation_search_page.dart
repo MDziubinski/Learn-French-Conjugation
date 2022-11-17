@@ -1,11 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:french_conjugation_learn/generated/local_keys.g.dart';
-import 'package:french_conjugation_learn/presentation/conjugation/cubit/conjugation_cubit.dart';
+import 'package:french_conjugation_learn/presentation/conjugation/cubit/conjugation_search/conjugation_cubit.dart';
+
+import 'package:french_conjugation_learn/presentation/routing/main_router.gr.dart';
 import 'package:french_conjugation_learn/presentation/style/app_dimens.dart';
 import 'package:french_conjugation_learn/presentation/style/app_theme.dart';
-import 'package:go_router/go_router.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
 
 class ConjugationSearchPage extends HookWidget {
@@ -45,6 +47,14 @@ class ConjugationSearchPage extends HookWidget {
             ),
             state.maybeWhen(
               loading: () => const CircularProgressIndicator(),
+              empty: () => Expanded(
+                child: Center(
+                  child: Text(
+                    LocaleKeys.searchPage_notFound.tr(),
+                    style: theme?.style1,
+                  ),
+                ),
+              ),
               loaded: (conjugations) {
                 return Expanded(
                   child: ListView.separated(
@@ -53,13 +63,9 @@ class ConjugationSearchPage extends HookWidget {
                     itemCount: conjugations.length,
                     itemBuilder: (context, index) => GestureDetector(
                       behavior: HitTestBehavior.translucent,
-                      // onTap: () => context.router.push(
-                      //     ConjugationResultPageRoute(
-                      //         verb: conjugations[index])),
-                      onTap: () => context.push(
-                        '/conjResultPage',
-                        extra: conjugations[index],
-                      ),
+                      onTap: () => context.router.push(
+                          ConjugationResultPageRoute(
+                              verb: conjugations[index])),
                       child: Padding(
                         padding: const EdgeInsets.all(AppDimens.s),
                         child: Row(

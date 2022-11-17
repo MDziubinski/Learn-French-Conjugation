@@ -10,6 +10,10 @@ class VerbDto {
   String auxiliaire;
   String formePronominale;
   String formeNonPronominale;
+  String description;
+  int verbGroup;
+  List<String> translationExamplesF;
+  List<String> translationExamplesEng;
   List<String> present;
   List<String> imparfait;
   List<String> passeSimple;
@@ -52,6 +56,10 @@ class VerbDto {
     required this.conditionnelPasseII,
     required this.imperatif,
     required this.imperatifPasse,
+    required this.description,
+    required this.translationExamplesEng,
+    required this.translationExamplesF,
+    required this.verbGroup,
   });
 
   factory VerbDto.fromJson(Map<String, dynamic> json) =>

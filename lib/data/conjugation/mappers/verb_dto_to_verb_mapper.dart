@@ -9,17 +9,21 @@ class VerbDtoToVerbMapper extends DataMapper<VerbDto, Verb> {
   Verb map(VerbDto data) {
     return Verb(
       infinitif: data.infinitif,
-      mappedConjugations: mapConjugations(
+      description: data.description,
+      translationExamplesEng: data.translationExamplesEng,
+      translationExamplesF: data.translationExamplesF,
+      verbGroup: data.verbGroup,
+      mappedConjugations: _mapConjugations(
         indicatifConj: mapIndicatif(data),
         subjonctifConj: mapSubjonctif(data),
         conditionnelConj: mapConditionnel(data),
         imperatifConj: mapImperatif(data),
       ),
-      mappedSingularForms: mapSingularForms(data),
+      mappedSingularForms: _mapSingularForms(data),
     );
   }
 
-  Map<String, String> mapSingularForms(VerbDto data) {
+  Map<String, String> _mapSingularForms(VerbDto data) {
     return {
       'Auxiliarie': data.auxiliaire,
       'Participe Présent': data.participePresent,
@@ -29,7 +33,7 @@ class VerbDtoToVerbMapper extends DataMapper<VerbDto, Verb> {
     };
   }
 
-  Map<String, Map<String, List<String>>> mapConjugations({
+  Map<String, Map<String, List<String>>> _mapConjugations({
     required Map<String, List<String>> indicatifConj,
     required Map<String, List<String>> subjonctifConj,
     required Map<String, List<String>> conditionnelConj,

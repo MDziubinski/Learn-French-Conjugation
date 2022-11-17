@@ -1,15 +1,96 @@
 {
     "appTitle": "French Verb Conjugation",
+    "common": {
+        "continue": "Continue",
+        "unavailable": "Unavailable",
+        "goToTest": "Go to Test",
+        "test": "Test",
+        "leave": "Leave",
+        "conjugation": "Conjugation",
+        "unfortunately": "Unfortunately!",
+        "congratulations": "Congratulations!",
+        "failed": "Failed!"
+    },
     "mainPage": {
+        "mainPage": "Main Page",
         "checkConjguation": "Check Verb Conjugation",
         "dailyTask": "Daily Task",
-        "learnConjugation": "Learn Verb Conjugation"
+        "learnConjugation": "Learn Verb Conjugation",
+        "singIn": "Sing In",
+        "pleaseSignIn": "Please sing in",
+        "pleaseSingInToSee": "Please sing in to see this content",
+        "googleSignIn": "Google Sing In",
+        "sideDrawer": {
+            "welcome": "Welcome {}",
+            "profile": "Profile",
+            "settings": "Settings",
+            "feedback": "Feedback",
+            "logout": "Logout"
+        }
     },
     "searchPage": {
         "searchVerb": "Search Verb",
-        "writeVerb": "Write your verb here"
+        "writeVerb": "Write your verb here",
+        "notFound": "Verb not found"
     },
-    "conjugationPage":{
-        "conjugationOf":"Conjugation of "
+    "conjugationPage": {
+        "conjugationOf": "Conjugation of ",
+        "descriptionAndExamples": "Description and Examples",
+        "examplesOfUse": "Examples of use",
+        "noDescription": "There is no description for this verb yet."
+    },
+    "conjugationLearnPage": {
+        "courses": "Courses",
+        "revision": "Revise"
+    },
+    "modulesInfo": {
+        "searchPageInfo": "Module that allows to search the conjugation of the given verb.",
+        "dailyTaskInfo": "Module that provides daily challenge.",
+        "learnConjugationInfo": "Module that provides courses to learn and revise french verb conjugation.",
+        "unavailableRevision": "Before you start revision, take some course and get introduced to verbs"
+    },
+    "coursePage": {
+        "name":"Course Page",
+        "introduction": "Introduction",
+        "firstGroupVerbs": "First group verbs course",
+        "secondGroupVerbs": "Second group verbs course",
+        "thirdGroupVerbs": "Third group verbs course",
+        "inflectionalEndings": "Inflectional endings",
+        "mainRules": "Main Rules",
+        "followVerb": "Follow Verb",
+        "test": "Test"
+    },
+    "revisionPage": {
+        "revise": "Revise Verb Conjugation",
+        "firstGroupVerbs": "First group verbs revision",
+        "secondGroupVerbs": "Second group verbs revision",
+        "thirdGroupVerbs": "Third group verbs revision",
+        "unavailable": "Revision is unavailable, please pass respective course to access this content."
+    },
+    "firstGroup": {
+        "followVerb": {
+            "description": "Follow Verb"
+        },
+
+        "revision": "First Group Revision",
+        "firstGroupTest": "First Group Verb Test",
+        "firstGroupResults": "First Group Verb Test Results",
+        
+        "backToCourse":"Back to Course Page"
+    },
+    "dailyTask": {
+        "pageTitle": "Daily Task Results",
+        "results": "Here are the results of the daily tasks:",
+        "alreadyDone": "You already did todays daily task!",
+        "tomorrow": "Come back tomorrow for new tasks."
+    },
+    "test": {
+        "passed": "You passed the test.",
+        "failed": "Unfortunately you failed the test.",
+        "retake": "Retake Test",
+        "results":"Here are the results of the test:",
+        "finish":"Finish Test",
+        "next":"Next task",
+        "start":"Start Test"
     }
 }

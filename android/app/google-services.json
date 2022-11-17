@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "463672341220-b2a5ujvaid2qkik51ltemvrscaqu6823.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.french_conjugation_learn",
+            "certificate_hash": "7098fc3d8d642fcff3f4b38fe0811b2fbfd0da24"
+          }
+        },
+        {
+          "client_id": "463672341220-bugrhk4liij75pojrmqdqc9o9vc607ak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.french_conjugation_learn",
+            "certificate_hash": "30353fa14fb044e3f48bd6a8246c10fc8f52ea94"
+          }
+        },
+        {
           "client_id": "463672341220-vobvum2mfckmrqurhu6s8f5ssuii8mvq.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -32,10 +48,10 @@
               "client_type": 3
             },
             {
-              "client_id": "463672341220-5mgvdienrfg3pbpcgtugsn2sf6tq7a20.apps.googleusercontent.com",
+              "client_id": "463672341220-543l0d14scpqtbov0datet8ncl2uegft.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "frenchVerbConjugation"
+                "bundle_id": "com.example.frenchConjugationLearn"
               }
             }
           ]

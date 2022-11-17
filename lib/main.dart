@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:french_conjugation_learn/presentation/routing/main_go_router.dart';
+import 'package:french_conjugation_learn/presentation/routing/main_router.gr.dart';
 import 'package:french_conjugation_learn/presentation/style/app_theme.dart';
 import 'package:hooked_bloc/hooked_bloc.dart';
 import 'package:logger/logger.dart';
@@ -13,7 +13,6 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await EasyLocalization.ensureInitialized();
-  await Firebase.initializeApp();
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   await configureDependencies();
@@ -27,14 +26,16 @@ Future<void> main() async {
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         startLocale: const Locale('en'),
-        child: const MyApp(),
+        child: MyApp(),
       ),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+  final _mainRouter = MainRouter();
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +43,8 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      routeInformationProvider: router.routeInformationProvider,
-      routeInformationParser: router.routeInformationParser,
-      routerDelegate: router.routerDelegate,
+      routeInformationParser: _mainRouter.defaultRouteParser(),
+      routerDelegate: _mainRouter.delegate(),
       title: 'French Verb Learn',
       theme: ThemeData.light().copyWith(
         extensions: <ThemeExtension<dynamic>>[

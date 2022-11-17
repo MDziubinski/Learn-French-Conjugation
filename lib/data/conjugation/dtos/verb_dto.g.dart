@@ -62,6 +62,14 @@ VerbDto _$VerbDtoFromJson(Map<String, dynamic> json) => VerbDto(
       imperatifPasse: (json['imperatifPasse'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
+      description: json['description'] as String,
+      translationExamplesEng: (json['translationExamplesEng'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      translationExamplesF: (json['translationExamplesF'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      verbGroup: json['verbGroup'] as int,
     );
 
 Map<String, dynamic> _$VerbDtoToJson(VerbDto instance) => <String, dynamic>{
@@ -71,6 +79,10 @@ Map<String, dynamic> _$VerbDtoToJson(VerbDto instance) => <String, dynamic>{
       'auxiliaire': instance.auxiliaire,
       'formePronominale': instance.formePronominale,
       'formeNonPronominale': instance.formeNonPronominale,
+      'description': instance.description,
+      'verbGroup': instance.verbGroup,
+      'translationExamplesF': instance.translationExamplesF,
+      'translationExamplesEng': instance.translationExamplesEng,
       'present': instance.present,
       'imparfait': instance.imparfait,
       'passeSimple': instance.passeSimple,
